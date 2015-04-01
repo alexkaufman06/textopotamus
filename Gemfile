@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bootstrap_form'
 gem 'bootswatch-rails'
 gem 'faker'
+gem 'rest-client'
 
 
 group :development do
@@ -23,6 +24,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -32,4 +34,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
 end
