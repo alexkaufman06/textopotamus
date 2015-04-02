@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
     @user = User.find(current_user.id)
     @contact = @user.contacts.new(contact_params)
     if @contact.save
-      flash[:success] = "Your contact was successfully saved!"
+      flash[:notice] = "Your contact was successfully saved!"
       redirect_to contact_path(current_user)
     else
       render 'new'
