@@ -1,21 +1,3 @@
 <h1>New message</h1>
 
-<% if @message.errors.any? %>
-  <p>Something went wrong:</p>
-  <ul>
-    <% @message.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= form_for @message do |f| %>
-  <%= f.label :to %>
-  <%= f.text_field :to, autofocus: true, required: true, class: "form-control" %>
-  <%= f.label :from %>
-  <%= f.text_field :from, required: true, class: "form-control" %>
-  <%= f.label :body %>
-  <%= f.text_field :body, required: true, class: "form-control" %>
-  <br>
-  <%= f.submit class: 'btn btn-success' %>
-<% end %>
+<%= render 'form' %>
