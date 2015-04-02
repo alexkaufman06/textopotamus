@@ -1,0 +1,15 @@
+<% if current_user.contacts.any? %>
+  <h4>Here are your contacts:</h4>
+  <ul>
+    <% current_user.contacts.each do |contact| %>
+      <hr>
+      <li>Name: <%= contact.name %></li>
+      <li>Phone Number: <%= contact.phone_number %></li>
+      <hr>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no contacts in your phone book</p>
+<% end %>
+
+<%= link_to "Add Contact", new_contact_path %>

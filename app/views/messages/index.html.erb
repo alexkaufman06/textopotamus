@@ -9,3 +9,7 @@
 <% if user_signed_in? %>
   <%= link_to "New message", new_message_path %>
 <% end %>
+<br>
+<% if user_signed_in? %>
+  <%= link_to "Phone Book", contact_path(@user) %>
+<% end %>
